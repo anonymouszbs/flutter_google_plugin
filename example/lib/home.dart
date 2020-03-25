@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  static const EventChannel eventChannel =const EventChannel('com.meetyou.flutter/event', const StandardMethodCodec());
+  static const EventChannel eventChannel =const EventChannel('com.allword.flutter/event', const StandardMethodCodec());
   @override
   void initState(){
     super.initState();

@@ -18,7 +18,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant;
 
 
 public class MainActivity extends FlutterActivity {
-  private static final String BATTERY_CHANNEL = "flutter_plugin_guiyin";
+  private static final String BATTERY_CHANNEL = "com.allword.flutter/event";
   private static final  String CHANNAL = "flutter_plugin_google";
   String guid = "吹牛逼";
   @Override
@@ -56,7 +56,6 @@ public class MainActivity extends FlutterActivity {
                 private BroadcastReceiver chargingStateChangeReceiver;
               @Override
               public void onListen(Object args, final EventChannel.EventSink events) {
-                events.success("哈哈老爸老爸你要去哪里呀");
                   chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
                   registerReceiver(
                           chargingStateChangeReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
